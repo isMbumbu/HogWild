@@ -64,7 +64,7 @@ nav button:hover {
   display: flex;
   justify-content: center; /* Center items horizontally */
   flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-  margin-top: 250px; /* Keep the existing top margin */
+  margin-top: 850px; /* Keep the existing top margin */
 }
 
 .main-controls button {

@@ -4,7 +4,7 @@ function HogTile({ hog, hideHog }) {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <div className="ui eight wide column ui card" onClick={() => setShowDetails(!showDetails)}>
+    <div className="ui eight wide column ui card">
       <h3>{hog.name}</h3>
       {/* Check if hog.image is a valid File object or a static image path */}
       {hog.image instanceof File ? (
@@ -20,6 +20,9 @@ function HogTile({ hog, hideHog }) {
           style={{ width: '200px', height: 'auto' }} // Set the width and height
         />
       )}
+      <button onClick={() => setShowDetails(!showDetails)}>
+        {showDetails ? "Hide Details" : "Show Details"}
+      </button>
       {showDetails && (
         <div>
           <p>Specialty: {hog.specialty}</p>
